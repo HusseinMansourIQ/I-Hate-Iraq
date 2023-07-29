@@ -22,30 +22,12 @@ const posts = await prisma.Post.findMany({
     <main className=" space-y-4 flex-col items-center justify-between p-24">
       
 <div className='flex space-x-6'>
+          
             <Link
-              href={{
-                pathname: '/',
-                query: {
-                  page: page > 1 ? page - 1 : 1
-                }
-              }}
-              className={clsx(
-                'rounded border bg-gray-100 px-3 py-1 text-sm text-gray-800',
-                page <= 1 && 'pointer-events-none opacity-50'
-              )}
+              href={'/addPost'}
+              className='text-right max-w-md p-2.5  text-sm text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 px-3 py-1 text-sm'
             >
-              Previous
-            </Link>
-            <Link
-              href={{
-                pathname: '/',
-                query: {
-                  page: page + 1
-                }
-              }}
-              className='rounded border bg-gray-100 px-3 py-1 text-sm text-gray-800'
-            >
-              Next
+              انشاء منشور
             </Link>
           </div>
 
